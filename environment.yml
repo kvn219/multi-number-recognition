@@ -1,0 +1,36 @@
+name: capstone
+channels: !!python/tuple
+- conda-forge
+- defaults
+dependencies:
+- conda-forge::ca-certificates=2016.9.26=0
+- conda-forge::certifi=2016.9.26=py35_0
+- conda-forge::freetype=2.6.3=1
+- conda-forge::jpeg=9b=0
+- conda-forge::libpng=1.6.28=0
+- conda-forge::libtiff=4.0.6=7
+- conda-forge::mock=2.0.0=py35_0
+- conda-forge::ncurses=5.9=10
+- conda-forge::openssl=1.0.2h=3
+- conda-forge::pandas=0.19.2=np111py35_1
+- conda-forge::pbr=1.10.0=py35_0
+- conda-forge::pillow=4.0.0=py35_0
+- conda-forge::pip=9.0.1=py35_0
+- conda-forge::protobuf=3.1.0=py35_0
+- conda-forge::python=3.5.2=4
+- conda-forge::python-dateutil=2.6.0=py35_0
+- conda-forge::pytz=2016.10=py35_0
+- conda-forge::readline=6.2=0
+- conda-forge::setuptools=32.3.1=py35_0
+- conda-forge::six=1.10.0=py35_1
+- conda-forge::sqlite=3.13.0=1
+- conda-forge::tensorflow=0.12.1=py35_1
+- conda-forge::tk=8.5.19=1
+- conda-forge::tqdm=4.11.0=py35_0
+- conda-forge::wheel=0.29.0=py35_0
+- conda-forge::xz=5.2.2=0
+- conda-forge::zlib=1.2.8=3
+- mkl=2017.0.1=0
+- numpy=1.11.3=py35_0
+prefix: /Users/kvn219/anaconda/envs/capstone
+
