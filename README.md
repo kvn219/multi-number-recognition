@@ -12,9 +12,6 @@ This repository contains my capstone project for Udacity's Machine Learning Engi
 
 The purpose of the capstone project was to examine street view images of house numbers and predict all the numbers present in the image. The evaluation metric for the project is per digit accuracy.  In other words, the number of correct digits predicted divided by the total number of digits in the dataset.  Our best model achieves 95% per digit accuracy after ten epochs of training (going through the dataset ten times).   
 
-
-We also provide a supplemental metric: sequential accuracy, which measures the number of correct predicted sequences divided by the number of total sequences in the dataset.  Probably the best two papers on the subject are from [Goodfellow et al. (2014)](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42241.pdf) and [Netzer et al. (2011)](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/37648.pdf).   And for more recent articles:  [Jaderberg et al. (2015)](http://papers.nips.cc/paper/5854-spatial-transformer-networks)  and [Ba et al. (2014)](https://arxiv.org/pdf/1412.7755v2.pdf) are also very useful resources. Jaderberg presents the use of Spatial Transformer Networks and Ba attention-based models.
-
 ## Browsing Notebooks
 
 [1. Explore raw images](https://github.com/kvn219/multi-number-recognition/blob/master/notebooks/1_Explore_Raw_Images.ipynb)
@@ -184,3 +181,12 @@ WARNING:tensorflow
 ...
 ~~~
 Go to your browser and go to the url: http://192.168.1.9:6006/
+
+# Extras
+
+We also provide a supplemental metric: sequential accuracy, which measures the number of correct predicted sequences divided by the number of total sequences in the dataset.
+
+ # Resouces and Attribution
+ Two good papers on the subject are from [Goodfellow et al. (2014)](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42241.pdf) and [Netzer et al. (2011)](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/37648.pdf).   And for more recent articles:  [Jaderberg et al. (2015)](http://papers.nips.cc/paper/5854-spatial-transformer-networks)  and [Ba et al. (2014)](https://arxiv.org/pdf/1412.7755v2.pdf) are also very useful resources. Jaderberg presents the use of Spatial Transformer Networks and Ba attention-based models. Two great examples of SVHN projects are from fellow Udacity students from [camigord](https://github.com/camigord/ML_CapstoneProject) and [hangyao](https://github.com/hangyao/street_view_house_numbers).
+ 
+ Much of the work in this repo is directly inspired by the work of the papers and projects mentioned above.
