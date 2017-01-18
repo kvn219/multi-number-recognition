@@ -186,7 +186,9 @@ Go to your browser and go to the url: http://192.168.1.9:6006/
 
 We also provide a supplemental metric: sequential accuracy, which measures the number of correct predicted sequences divided by the number of total sequences in the dataset.
 
- # Resouces and Attribution
+
+# Resouces and Attribution
+
  Two good papers on the subject are from [Goodfellow et al. (2014)](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42241.pdf) and [Netzer et al. (2011)](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/37648.pdf).   And for more recent articles:  [Jaderberg et al. (2015)](http://papers.nips.cc/paper/5854-spatial-transformer-networks)  and [Ba et al. (2014)](https://arxiv.org/pdf/1412.7755v2.pdf) are also very useful resources. Jaderberg presents the use of Spatial Transformer Networks and Ba attention-based models. Two great examples of SVHN projects are from fellow Udacity students from [camigord](https://github.com/camigord/ML_CapstoneProject) and [hangyao](https://github.com/hangyao/street_view_house_numbers).
  
  Much of the work in this repo is directly inspired by the work of the papers and projects mentioned above.
