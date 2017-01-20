@@ -15,13 +15,16 @@ The purpose of the capstone project was to examine street view images of house n
 
 We also provide a supplemental metric: sequential accuracy, which measures the number of correct predicted sequences divided by the number of total sequences in the dataset.  Probably the best two papers on the subject are from [Goodfellow et al. (2014)](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42241.pdf) and [Netzer et al. (2011)](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/37648.pdf).   And for more recent articles:  [Jaderberg et al. (2015)](http://papers.nips.cc/paper/5854-spatial-transformer-networks)  and [Ba et al. (2014)](https://arxiv.org/pdf/1412.7755v2.pdf) are also very useful resources. Jaderberg presents the use of Spatial Transformer Networks and Ba attention-based models.
 
-## Browsing Notebooks
+## Notebooks to Browse
 
 [1. Explore raw images](https://github.com/kvn219/multi-number-recognition/blob/master/notebooks/1_Explore_Raw_Images.ipynb)
 
 [2. Samples analysis](https://github.com/kvn219/multi-number-recognition/blob/master/notebooks/2_Samples_Analysis.ipynb)
 
 [3. Model evaluation](https://github.com/kvn219/multi-number-recognition/blob/master/notebooks/3_Model_Evaluation.ipynb)
+
+[4. Overfitting](https://github.com/kvn219/multi-number-recognition/blob/master/notebooks/4_Overfitting.ipynb)
+
 
 ## Requirements
 This project works on [Anaconda's](http://continuum.io/downloads) distribution of Python 3.5

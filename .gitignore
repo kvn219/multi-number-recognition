@@ -104,3 +104,14 @@ ENV/
 /svhn/test.tar.gz
 /svhn/train.tar.gz
 /svhn/interim/
+/logs/lrate00001/
+/logs/lrate0001/
+/logs/lrate001/
+/results/demo/
+/results/grayscale/
+/results/grayscale00001/
+/results/grayscale0001/
+/results/grayscale001/
+/checkpoints/grayscale00001/
+/checkpoints/grayscale0001/
+/checkpoints/grayscale001/
