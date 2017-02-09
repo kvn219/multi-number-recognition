@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5100d5e-846d-4163-a332-6bb17d4a64a6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convert_to_records.py" afterPath="$PROJECT_DIR$/convert_to_records.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/evaluate.py" afterPath="$PROJECT_DIR$/evaluate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/architecture.py" afterPath="$PROJECT_DIR$/libs/architecture.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/layers.py" afterPath="$PROJECT_DIR$/libs/layers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/solvers.py" afterPath="$PROJECT_DIR$/libs/solvers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/utilities.py" afterPath="$PROJECT_DIR$/libs/utilities.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pipeline.py" afterPath="$PROJECT_DIR$/pipeline.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/svhn/data_config.py" afterPath="$PROJECT_DIR$/svhn/data_config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/svhn/download.py" afterPath="$PROJECT_DIR$/svhn/download.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/svhn/wrangle.py" afterPath="$PROJECT_DIR$/svhn/wrangle.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train.py" afterPath="$PROJECT_DIR$/train.py" />
-    </list>
+    <list default="true" id="d5100d5e-846d-4163-a332-6bb17d4a64a6" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
