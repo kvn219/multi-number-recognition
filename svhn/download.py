@@ -4,7 +4,6 @@ import sys
 import tarfile
 import pickle
 
-
 import numpy as np
 from six.moves.urllib.request import urlretrieve
 from time import sleep
@@ -14,7 +13,6 @@ from data_config import downloadParams
 
 np.random.seed(99)
 last_percent_reported = None
-
 
 params = downloadParams()
 
@@ -51,6 +49,7 @@ def maybe_download(filename, force=False):
     statinfo = os.stat(file_dir)
     return filename
 
+
 def maybe_extract(filename, force=False):
     # get root of filename by removing .tar.gz
     root = os.path.splitext(os.path.splitext(filename)[0])[0]
@@ -70,6 +69,7 @@ def maybe_extract(filename, force=False):
     data_folders = root
     sleep(15)
     return data_folders
+
 
 class DigitStructFile:
     def __init__(self, inf):
@@ -128,10 +128,11 @@ class DigitStructFile:
             item['boxes'] = figures
             result.append(item)
         return result
-    
+
+
 def download_and_extract(file):
-    filename = maybe_download( file )
-    folder = maybe_extract( filename)
+    filename = maybe_download(file)
+    folder = maybe_extract(filename)
     return filename, folder
 
 
@@ -141,6 +142,7 @@ def get_digit_structure(folder):
     data = dsf.getAllDigitStructure_ByDigit()
     return data
 
+
 def pickle_files(pickle_file, data):
     print("Pickling...{}".format(pickle_file))
     if not os.path.exists(pickle_file):
@@ -148,12 +150,13 @@ def pickle_files(pickle_file, data):
             f = open(pickle_file, 'wb')
             pickle.dump(data, f, pickle.HIGHEST_PROTOCOL)
             f.close()
-            print( "Done pickling...{}".format( pickle_file ) )
+            print("Done pickling...{}".format(pickle_file))
         except Exception as e:
             print('Unable to save data to', pickle_file, ':', e)
             raise
     else:
         print("{} already exists...skipping pickle".format(pickle_file))
+
 
 def process(filename):
     name, folder = download_and_extract(filename)
@@ -162,6 +165,7 @@ def process(filename):
     if not os.path.exists("./raw"):
         os.makedirs("./raw/")
     pickle_files("raw/" + root_name + ".pickle", data)
+
 
 if __name__ == '__main__':
     process("train.tar.gz")

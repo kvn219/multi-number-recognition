@@ -17,7 +17,7 @@ def main(params):
     print("Mode: {}".format(params.mode))
     print("Is training: {}".format(params.is_training))
     print("Logger: {}".format(params.log))
-    print( "Checkpoint dir: {}".format(params.checkpoint_dir ))
+    print("Checkpoint dir: {}".format(params.checkpoint_dir))
     print("Loading data from {}".format(params.record_name[1:]))
     print("Num epochs: {}".format(params.num_epochs))
     print("Batch size: {}".format(params.batch_size))
@@ -29,80 +29,80 @@ def main(params):
     # pprint( vars( params ) )
 
     if params.mode == "train":
-    
+
         trainer(params)
-    
+
     elif params.mode == "test":
-        
+
         running_results = {
-            'checkpoint': [],
+            'checkpoint'       : [],
             'sequence_accuracy': [],
-            'digit_accuracy': []
+            'digit_accuracy'   : []
         }
 
         # Collect checkpoints to evaluate
-        checkpoints_to_eval = glob( '{}*.meta'.format( params.checkpoint_dir ) )
+        checkpoints_to_eval = glob('{}*.meta'.format(params.checkpoint_dir))
 
         # Remove "meta" extension
-        checkpoint_list = [ chkpt[ :-5 ] for chkpt in checkpoints_to_eval ]
+        checkpoint_list = [chkpt[:-5] for chkpt in checkpoints_to_eval]
 
         # Take the step number (last number index)
-        checkpoints_index = [ int( i.split( '-' )[ -1 ] ) for i in checkpoint_list ]
+        checkpoints_index = [int(i.split('-')[-1]) for i in checkpoint_list]
 
         # Run an evaluation for each checkpoint
-        for index, checkpoint in tqdm( zip( checkpoints_index, checkpoint_list ) ):
-            results = evaluator( params, checkpoint )
-            running_results[ 'checkpoint' ].append( index )
-            running_results[ 'sequence_accuracy' ].append( results[ 'sequence_accuracy' ][ 0 ] )
-            running_results[ 'digit_accuracy' ].append( results[ 'digit_accuracy' ][ 0 ] )
-
-        # Create a data frame with results
-        df = pd.DataFrame( running_results )
-        results = df.sort_values( by='checkpoint', ascending=True )
-
-        # Save results to results directory
-        results.to_csv( params.results_path, index=False )
-        print( "Results saved to {}\n".format( params.results_path ) )
-
-        # Preview results in terminal
-        print( results )
-        
-    elif params.mode == "valid":
-        running_results = {
-            'checkpoint': [],
-            'sequence_accuracy': [],
-            'digit_accuracy': []
-        }
-    
-        # Collect checkpoints to evaluate
-        checkpoints_to_eval = glob( '{}*.meta'.format( params.checkpoint_dir ) )
-    
-        # Remove "meta" extension
-        checkpoint_list = [ chkpt[ :-5 ] for chkpt in checkpoints_to_eval ]
-    
-        # Take the step number (last number index)
-        checkpoints_index = [ int( i.split( '-' )[ -1 ] ) for i in checkpoint_list ]
-    
-        # Run an evaluation for each checkpoint
-        for index, checkpoint in tqdm( zip(checkpoints_index, checkpoint_list) ):
-            results = evaluator( params, checkpoint )
+        for index, checkpoint in tqdm(zip(checkpoints_index, checkpoint_list)):
+            results = evaluator(params, checkpoint)
             running_results['checkpoint'].append(index)
             running_results['sequence_accuracy'].append(results['sequence_accuracy'][0])
-            running_results[ 'digit_accuracy' ].append( results[ 'digit_accuracy' ][0] )
-            print( )
+            running_results['digit_accuracy'].append(results['digit_accuracy'][0])
 
         # Create a data frame with results
-        df = pd.DataFrame( running_results )
-        results = df.sort_values( by='checkpoint', ascending=True )
-    
+        df = pd.DataFrame(running_results)
+        results = df.sort_values(by='checkpoint', ascending=True)
+
         # Save results to results directory
-        results.to_csv( params.results_path, index=False )
-        print( "Results saved to {}\n".format( params.results_path ) )
-    
+        results.to_csv(params.results_path, index=False)
+        print("Results saved to {}\n".format(params.results_path))
+
         # Preview results in terminal
-        print( results )
-        
-        
+        print(results)
+
+    elif params.mode == "valid":
+        running_results = {
+            'checkpoint'       : [],
+            'sequence_accuracy': [],
+            'digit_accuracy'   : []
+        }
+
+        # Collect checkpoints to evaluate
+        checkpoints_to_eval = glob('{}*.meta'.format(params.checkpoint_dir))
+
+        # Remove "meta" extension
+        checkpoint_list = [chkpt[:-5] for chkpt in checkpoints_to_eval]
+
+        # Take the step number (last number index)
+        checkpoints_index = [int(i.split('-')[-1]) for i in checkpoint_list]
+
+        # Run an evaluation for each checkpoint
+        for index, checkpoint in tqdm(zip(checkpoints_index, checkpoint_list)):
+            results = evaluator(params, checkpoint)
+            running_results['checkpoint'].append(index)
+            running_results['sequence_accuracy'].append(results['sequence_accuracy'][0])
+            running_results['digit_accuracy'].append(results['digit_accuracy'][0])
+            print()
+
+        # Create a data frame with results
+        df = pd.DataFrame(running_results)
+        results = df.sort_values(by='checkpoint', ascending=True)
+
+        # Save results to results directory
+        results.to_csv(params.results_path, index=False)
+        print("Results saved to {}\n".format(params.results_path))
+
+        # Preview results in terminal
+        print(results)
+
+
 if __name__ == '__main__':
-    params = SVHNParams( )
+    params = SVHNParams()
     main(params)

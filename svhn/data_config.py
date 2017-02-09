@@ -1,5 +1,6 @@
 import os
 
+
 class downloadParams():
     def __init__(self):
         self.dir = os.path.abspath(".")
